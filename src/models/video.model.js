@@ -37,6 +37,7 @@ const videoSchema = new Schema({
    }
 },{timestamps})
 
+// Mongoose plugin used to paginate results from MongoDB aggregation queries.
 videoSchema.plugin(mongooseAggregatePaginate)
 
 export const Video = new mongoose.model("Video", videoSchema )
